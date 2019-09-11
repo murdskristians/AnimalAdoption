@@ -27,3 +27,6 @@ yarn run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+# Site link:
+# https://admiring-panini-741142.netlify.com
