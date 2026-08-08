@@ -1,0 +1,10 @@
+# This is a 2019 Vue 2 project on @vue/cli-service 3 (webpack 4), so it was
+# stuck on a Node old enough to still build node-sass 4.x from source.
+#
+# node-sass is gone (replaced by dart-sass, which ships no native addon), but
+# webpack 4 still calls crypto.createHash("md4"); OpenSSL 3 rejects that, hence
+# the legacy provider flag. Upgrading to @vue/cli-service 5 would drop the flag,
+# but its peer graph conflicts with this project's eslint 5 toolchain.
+[build.environment]
+  NODE_VERSION = "22"
+  NODE_OPTIONS = "--openssl-legacy-provider"
